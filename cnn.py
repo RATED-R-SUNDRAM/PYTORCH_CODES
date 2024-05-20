@@ -63,9 +63,10 @@ lr_scheduler = torch.optim.lr_scheduler.StepLR(optimizer, step_size=1, gamma=0.9
 
 # %%
 
-epoch=0 
 
-while(epoch <=20):
+#%%
+epoch=0 
+while(epoch <=10):
     for i,(images,labels) in enumerate(train_data):
         output = model(images)
         loss_value = loss(output,labels)
@@ -86,8 +87,17 @@ with torch.no_grad():
         output = model(images)
         _,predicted = torch.max(output,1)
         tot+=64
+        #print(_,predicted)
         cnt+= (predicted==labels).sum().item()
 print(cnt/tot)
 
         
+# %%
+
+print(output.shape)
+print(_.shape)
+print(predicted.shape)
+print(output)
+print(_)
+print(predicted)
 # %%
