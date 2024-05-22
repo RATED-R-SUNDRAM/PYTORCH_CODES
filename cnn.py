@@ -66,15 +66,22 @@ lr_scheduler = torch.optim.lr_scheduler.StepLR(optimizer, step_size=1, gamma=0.9
 
 #%%
 epoch=0 
-while(epoch <=10):
+flag=True
+while(flag):
     for i,(images,labels) in enumerate(train_data):
         output = model(images)
         loss_value = loss(output,labels)
+        print("loss_value =",loss_value.item())
+        if(loss_value.item()<0.4):
+            flag=False
+            break
         optimizer.zero_grad()
         loss_value.backward()
+
         optimizer.step()
         if(i%100==0):
             print(f"Epoch {epoch} Batch {i} Loss {loss_value.item()}")
+        
     lr_scheduler.step()
     epoch+=1
 
@@ -100,4 +107,6 @@ print(predicted.shape)
 print(output)
 print(_)
 print(predicted)
+# %%
+torch.save(model.state_dict(), "cnn_model.pth")
 # %%
