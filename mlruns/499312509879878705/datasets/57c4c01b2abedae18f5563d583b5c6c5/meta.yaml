@@ -1,0 +1,11 @@
+digest: 8bc2384a
+name: dataset
+profile: '{"features_shape": [112, 4], "features_size": 448, "features_nbytes": 3584,
+  "targets_shape": [112], "targets_size": 112, "targets_nbytes": 112}'
+schema: '{"mlflow_tensorspec": {"features": "[{\"type\": \"tensor\", \"tensor-spec\":
+  {\"dtype\": \"float64\", \"shape\": [-1, 4]}}]", "targets": "[{\"type\": \"tensor\",
+  \"tensor-spec\": {\"dtype\": \"int8\", \"shape\": [-1]}}]"}}'
+source: '{"tags": {"mlflow.user": "Shivam Sundram", "mlflow.source.name": "C:\\Users\\Shivam
+  Sundram\\AppData\\Roaming\\Python\\Python310\\site-packages\\ipykernel_launcher.py",
+  "mlflow.source.type": "LOCAL", "mlflow.source.git.commit": "ef7a940a01bf7579e613505f8a0f650267f00b22"}}'
+source_type: code

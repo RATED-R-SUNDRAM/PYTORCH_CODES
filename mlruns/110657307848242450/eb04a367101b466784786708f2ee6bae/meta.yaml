@@ -1,0 +1,15 @@
+artifact_uri: file:///d:/ONE_DRIVE/Desktop/PYTORCH/mlruns/110657307848242450/eb04a367101b466784786708f2ee6bae/artifacts
+end_time: 1716485339969
+entry_point_name: ''
+experiment_id: '110657307848242450'
+lifecycle_stage: active
+run_id: eb04a367101b466784786708f2ee6bae
+run_name: custom_clf_pytorch
+run_uuid: eb04a367101b466784786708f2ee6bae
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1716484193636
+status: 3
+tags: []
+user_id: Shivam Sundram
