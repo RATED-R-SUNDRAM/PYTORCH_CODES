@@ -93,6 +93,8 @@ mlflow.pyfunc.log_model(artifact_path="model",python_model=clf)
 # %%
 
 clf2 = mlflow.pyfunc.load_model("runs:/a8fc04526db8406f8778e06487a749b1/model")
+#%%
+clf2 = clf2.unwrap_python_model()
 # %%
 clf2.predict(xte)
 # %%
